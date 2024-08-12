@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.chat-container {
+    position: absolute;
+    align-self: self-start;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    margin-block: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
+}
+
+h2 {
+    border-top: #ddd 3px solid;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.chat-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.message {
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+.user-message {
+    text-align: right;
+    color: rgb(25, 26, 24);
+}
+
+.bot-message {
+    text-align: left;
+    color: green;
+}
+
+.input-container {
+    display: flex;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    min-width: 10rem;
+    min-height: 3rem;
+    padding: 10px;
+    margin-left: 1rem;
+    border: 1px solid #ddd;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: medium;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display:none;
+}
+
+#feedback-form-container {
+    margin-top: 20px;
+}
+
+#feedback-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2rem;
+}
+
+#feedback-form button[type="submit"] {
+    display: block;
+    align-self: flex-end;
+}
+
+
+.form-error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/*#region stars */
+
+#rating {
+    width: fit-content;
+    max-width: 80%;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.star {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.star:hover {
+    transition: transform .2s ease-in-out;
+    transform-origin: bottom;
+    transform: scale(1.1, 1.1);
+}
+
+.one {
+    color: rgb(161, 7, 7);
+}
+
+.two {
+    color: rgb(187, 104, 44);
+}
+
+.three {
+    color: rgb(221, 179, 39);
+}
+
+.four {
+    color: rgb(171, 235, 69);
+}
+
+.five {
+    color: rgb(13, 133, 4);
+}
+
+
+/*#region commentaire */
+#commentaire  {
+    width: 80%;
+    height: 7rem;
+
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+
+    display: block;
+}
+
+textarea {
+    resize: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Conteneur de chat */
+.chat-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px; /* Largeur maximale pour le conteneur de chat */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff; /* Couleur de fond du conteneur de chat */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre autour du conteneur */
+}
+
+/* Style pour l'indicateur de chargement centré */
+.loader {
+    width: 45px;
+    height: 45px;
+    position: fixed; /* Utiliser fixed pour qu'il reste au milieu même lors du défilement */
+    top: 50%; /* Centrer verticalement */
+    left: 48%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste le centrage pour être précis */
+    border-radius: 50%;
+    border: 4px solid rgba(228, 68, 40, 0.2);
+    border-top: 4px solid #f13413;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#send-btn:disabled {
+    background-color: #cccccc; /* Changer la couleur de fond */
+    color: #666666;            /* Changer la couleur du texte */
+    cursor: not-allowed;       /* Changer le curseur pour indiquer que le bouton est désactivé */
+    opacity: 0.6;              /* Ajouter de la transparence */
+}
+#user-input:disabled {
+    background-color: #eeeeee; /* Couleur de fond grise claire */
+    color: #aaaaaa;            /* Couleur du texte grisée */
+    cursor: not-allowed;       /* Curseur d'interdiction */
+    opacity: 0.6;              /* Légère transparence */
+}
+.loading-text {
+    display: flex;
+    align-items: center; /* Aligner verticalement */
+    justify-content: center; /* Aligner horizontalement */
+    gap: 10px; /* Espacement entre le loader et le texte */
+    padding: 20px; /* Espacement autour du conteneur */
+    font-size: 20px; /* Taille de la police */
+    color: #d83737; /* Couleur du texte */
+    font-weight: bold; /* Mettre le texte en gras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
+    border-radius: 8px; /* Coins arrondis */
+    transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* Media Query pour les petits écrans */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Taille réduite pour petits écrans */
+    }
+    .chat-container {
+        width: 95%; /* Utiliser 95% de la largeur sur mobile */
+        padding: 10px; /* Réduire le remplissage */
+    }
+
+    .chat-box {
+        height: 200px; /* Réduire la hauteur de la boîte de chat */
+    }
+
+    .input-container {
+        flex-direction: column; /* Aligner les éléments en colonne */
+        width: 100%; /* S'assurer que le conteneur d'entrée prend toute la largeur */
+    }
+
+    input[type="text"], button {
+        width: 100%; /* Prendre toute la largeur sur mobile */
+        margin-bottom: 10px; /* Espacement entre les éléments */
+        box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+    }
+
+    button {
+        margin-left: 0; /* Supprimer la marge à gauche */
+    }
+
+    .loader {
+        width: 30px; /* Réduire la taille de l'indicateur de chargement */
+        height: 30px; /* Réduire la taille de l'indicateur de chargement */
+        top: 40%;
+    }
+    #commentaire {
+        width: 95%; /* Ajuster la largeur du commentaire */
+    }
+}

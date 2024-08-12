@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <h1>LLM RAG simple</h1>
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">Welcome ! Ask your questions please </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Please type your question here...">
+            <button id="send-btn">Send</button>
+        </div>
+        <span class="loader hidden"></span> 
+        <div class="loading-text hidden">Please wait...</div>
+        <div id="feedback-form-container" class="hidden">
+            <h2>Feedback</h2>
+            <form id="feedback-form">
+                <label for="comment">Please write your comments regarding the response</label>
+                <textarea id="comment" name="comment" cols="40" rows="5" placeholder="..."></textarea>
+                <label for="rating">Rate the response from 1 to 5</label>
+                <div id="rating"></div>
+                <input type="hidden" id="selected-rating" name="rating" value="-1">
+                <div id="form-error" class="form-error hidden">Please fill in all the fields</div>
+                <button type="submit">Send the Feedback</button>
+            </form>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+    <script src="stars.js"></script>
+    <script src="comment.js"></script>
+</body>
+
+</html>
+

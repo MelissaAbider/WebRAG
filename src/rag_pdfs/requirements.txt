@@ -1,0 +1,7 @@
+langchain==0.2.7
+langchain_community==0.2.7
+langchain_experimental==0.0.62
+txtai==7.3.0
+unstructured==0.14.10
+chromadb==0.5.4
+tiktoken==0.7.0

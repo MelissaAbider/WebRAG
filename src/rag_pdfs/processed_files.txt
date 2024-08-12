@@ -1,0 +1,10 @@
+src/rag_pdfs/documents_complets/doc15.pdf
+src/rag_pdfs/documents_complets/doc1.pdf
+src/rag_pdfs/documents_complets/doc13.pdf
+src/rag_pdfs/documents_complets/doc2.pdf
+src/rag_pdfs/documents_complets/doc5.pdf
+src/rag_pdfs/documents_complets/doc12.pdf
+src/rag_pdfs/documents_complets/doc3.pdf
+src/rag_pdfs/documents_complets/doc8.pdf
+src/rag_pdfs/documents_complets/doc16.pdf
+src/rag_pdfs/documents_complets/doc4.pdf

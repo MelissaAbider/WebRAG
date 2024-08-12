@@ -1,0 +1,1 @@
+#Ce fichier indique à Python que le dossier app doit être traité comme un package.

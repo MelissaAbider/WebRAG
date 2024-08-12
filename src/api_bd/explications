@@ -1,0 +1,15 @@
+
+    main.py utilise les fonctions du module crud pour créer, lire et gérer les utilisateurs, les sessions et les prompts.
+    crud.py utilise les modèles définis dans models.py et les schémas définis dans schemas.py pour créer, lire et gérer les données.
+    models.py définit les modèles de données pour les utilisateurs, les sessions et les prompts.
+    schemas.py définit les schémas de validation pour les utilisateurs, les sessions et les prompts.
+    database.py définit la configuration de la base de données.
+
+# relation fontions de route et fonctions de crud 
+    Les fonctions de route appellent les fonctions de CRUD : Les fonctions de route sont responsables de gérer les requêtes HTTP et de retourner des réponses appropriées. Lorsqu'une requête est reçue, la fonction de route appropriée est appelée. Cette fonction de route appelle alors une fonction de CRUD pour accomplir l'opération de base de données requise.
+    Les fonctions de CRUD interagissent avec la base de données : Les fonctions de CRUD sont responsables d'interagir avec la base de données pour créer, lire, mettre à jour ou supprimer des données. Elles utilisent des bibliothèques de base de données comme SQLAlchemy ou Django ORM pour interagir avec la base de données.
+    Les fonctions de CRUD retournent des données à la fonction de route : Une fois que la fonction de CRUD a accompli l'opération de base de données, elle retourne les données résultantes à la fonction de route.
+    La fonction de route retourne une réponse à l'utilisateur : La fonction de route prend les données retournées par la fonction de CRUD et les utilise pour générer une réponse appropriée à l'utilisateur.
+
+
+
