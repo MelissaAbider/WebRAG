@@ -1,0 +1,45 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    container_name: fastapi-container
+    ports:
+      - "8000:8000"  # Port exposé pour l'API
+    environment:
+      - ENV=development
+      - DATABASE_URL=sqlite:////app/src/api_bd/sql_app.db  # Lien pour la base de données
+    volumes:
+      - ./src/api_bd/sql_app.db:/app/src/api_bd/sql_app.db
+      - ./src:/app/src
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    ports:
+      - "80:80"      # Port exposé pour Nginx (front-end)
+    environment:
+      - ENV=development
+
+  mistral-ollama:
+    build:
+      context: .
+      dockerfile: ollama.Dockerfile
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+    pull_policy: always
+    tty: true
+    restart: always
+    ports:
+      - "7869:11434"
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

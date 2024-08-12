@@ -1,0 +1,20 @@
+langchain==0.2.7
+langchain_community==0.2.7
+langchain_experimental==0.0.62
+txtai==7.3.0
+unstructured==0.14.10
+chromadb==0.5.4
+tiktoken==0.7.0
+PyMuPDF==1.24.7
+# pour api
+fastapi==0.111.0
+uvicorn==0.30.1
+SQLAlchemy==2.0.31
+pydantic==2.8.0
+
+aiofiles==0.8.0           # Pour la gestion des fichiers asynchrones
+httpx==0.27.0             # Client HTTP asynchrone
+python-multipart==0.0.9   # Pour gérer les formulaires multipart
+
+
+
