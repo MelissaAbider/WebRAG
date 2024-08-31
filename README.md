@@ -1,4 +1,4 @@
-#Présentation
+#Présentation#
 RAGWeb est une application web qui utilise la génération augmentée par récupération (RAG) pour répondre aux questions des utilisateurs. L'application permet aux utilisateurs de poser des questions via une interface web, de recevoir des réponses générées par le système RAG, et de fournir des retours sur les réponses. Toutes les interactions, y compris les questions, les réponses et les retours, sont stockées dans une base de données SQLite
 
 #Fonctionnalités Interface Web
